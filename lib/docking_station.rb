@@ -6,8 +6,4 @@ class DockingStation
     Bike.new
   end
 
-  def say_hello
-
-  end
-
 end
