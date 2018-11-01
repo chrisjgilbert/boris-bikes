@@ -19,10 +19,10 @@ describe DockingStation do
     end
   end
 
-  # it 'allows user to see if a bike has been docked' do
-  #   bike = Bike.new
-  #   subject.dock(bike)
-  #   expect(subject.bike_rack.include?(bike)).to eq true
-  # end
+  it 'allows user to see if a bike has been docked' do
+    bike = Bike.new
+    subject.dock(bike)
+    expect(subject.bike_rack.include?(bike)).to eq true
+  end
 
 end
