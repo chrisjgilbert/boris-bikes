@@ -23,4 +23,12 @@ describe DockingStation do
     expect(dockingstation.bike_rack.include?(bike)).to eq true
   end
 
+  it 'allows a user to specify a capacity when creating a staion' do
+    expect(DockingStation).to respond_to(:new).with(1).argument
+  end
+
+  it 'sets a default capacity when no capacity is specified' do
+    expect(dockingstation.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  end
+
 end
