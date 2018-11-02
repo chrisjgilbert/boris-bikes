@@ -12,6 +12,7 @@ class DockingStation
 
   def release_bike
     fail "Station is empty" if @bike_rack.empty?
+    fail "No working bikes left" if all_broken?
     @bike_rack.pop
   end
 
@@ -24,6 +25,10 @@ class DockingStation
 
   def full?
      @bike_rack.size >=  DEFAULT_CAPACITY
+  end
+
+  def all_broken?
+    @bike_rack.all? { |bike| bike.working == false }
   end
 
 end

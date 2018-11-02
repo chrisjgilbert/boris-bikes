@@ -6,6 +6,7 @@ class Bike
 
   def report_as_not_working
     @working = false
+    self
   end
 
 end
