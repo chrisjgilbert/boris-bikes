@@ -15,6 +15,14 @@ describe DockingStation do
       dockingstation.dock(bike)
       expect{dockingstation.release_bike}.to raise_error "No working bikes left"
     end
+
+    it "allows users to release a working bike" do
+      working_bike = Bike.new
+      broken_bike = Bike.new.report_as_not_working
+      dockingstation.dock(working_bike)
+      dockingstation.dock(broken_bike)
+      expect(dockingstation.release_bike.working).to eq true
+    end
   end
 
   describe "#dock" do
