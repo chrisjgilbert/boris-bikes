@@ -1,10 +1,10 @@
 require 'bike'
 
 describe Bike do
-  it { is_expected.to respond_to :working? }
+
+  let(:bike) { Bike.new }
 
   it 'the bike should be working' do
-    bike = Bike.new
     expect(bike).to be_working
   end
 
