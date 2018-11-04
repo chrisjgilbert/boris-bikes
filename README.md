@@ -1,2 +1,3 @@
-Setting up a simple project working in pairs.
-We will train on git commands and Ruby.
+# Boris Bikes Application
+
+This program emulates all the docking stations, bikes and infrastructure of a Boris bike system.
